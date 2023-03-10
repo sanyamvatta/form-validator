@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validator</title>
+  <link rel="shortcut icon" href="http://favicon.yandex.net/favicon/netflix.com" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up Today</h1>
+    <!-- Form -->
+    <form id="form">
+      <!-- inputs -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input name="name" type="text" id="name" placeholder="Full Name " required minlength="3" maxlength="100">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input name="phone" type="tel" id="phone" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Adresss</label>
+        <input name="email" type="email" id="email" placeholder="johndoe@adress.com" required>
+      </div>
+      <div class="form-group">
+        <label for="website">Website URL</label>
+        <input name="website" type="url" id="website" placeholder="https://sanyamvatta.github.io" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password1">Password</label>
+        <input name="password" type="password" id="password1" placeholder="Create Password(min 8 characters)" title="Please include atleast 1 uppercase, 1 lowercase character and 1 number" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+      </div>
+
+      <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" placeholder="Confirm Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <!-- Error/Success messsage -->
+    <div class="message-container">
+      <h3 id="message">Don't Hesitate</h3>
+    </div>
+  </div>  
+  <!-- Javascript file -->
+  <script src="script.js"></script>
+</body>
+</html>
